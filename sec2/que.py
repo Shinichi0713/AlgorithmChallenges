@@ -13,3 +13,4 @@ q.put('c')
 print("\nQueue after elements are dequeued:")
 while not q.empty():
     print(q.get())
+

@@ -21,6 +21,9 @@ def solution(sum_dst, X):
 class TestSolution(unittest.TestCase):
     def test_1_sample(self):
         self.assertEqual(solution(13, [1, 2, 4, 7]), True)
+
+    def test_2_sample(self):
+        self.assertEqual(solution(23, [2, 5, 8, 12, 16, 23, 38, 56, 72, 91]), True)
     
 
 unittest.main(argv=['first-arg-is-ignored'], exit=False)
