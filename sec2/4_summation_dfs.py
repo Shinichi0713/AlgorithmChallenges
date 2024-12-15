@@ -39,6 +39,7 @@ def solution_stack(array_input, sum_desire):
 def solution_stack2(array_input, sum_desire):
     stack = [(0, sum_desire)]
     while stack:
+        # 初期に入れたものをpopで取り出す
         cursor, remaining_sum = stack.pop()
 
         if remaining_sum == 0:
