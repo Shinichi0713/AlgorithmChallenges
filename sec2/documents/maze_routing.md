@@ -13,5 +13,5 @@ Constraints: N, M <= 100
 ## necessry
 
 1. read text→array[X][Y]
-2. bfs()
+2. bfs(find)
 3. main()
