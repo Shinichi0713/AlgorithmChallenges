@@ -27,12 +27,18 @@
     <ClCompile Include="2-lake-counting.cpp">
       <Filter>ソース ファイル\lesson</Filter>
     </ClCompile>
+    <ClCompile Include="3-maze-calculate.cpp">
+      <Filter>ソース ファイル\lesson</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stack.h">
       <Filter>ソース ファイル\lesson</Filter>
     </ClInclude>
     <ClInclude Include="2-lake-counting.h">
+      <Filter>ソース ファイル\lesson</Filter>
+    </ClInclude>
+    <ClInclude Include="3-maze-calculate.h">
       <Filter>ソース ファイル\lesson</Filter>
     </ClInclude>
   </ItemGroup>

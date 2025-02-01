@@ -141,10 +141,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="2-lake-counting.cpp" />
+    <ClCompile Include="3-maze-calculate.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="stack.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="3-maze-calculate.h" />
     <ClInclude Include="stack.h" />
     <ClInclude Include="2-lake-counting.h" />
   </ItemGroup>
