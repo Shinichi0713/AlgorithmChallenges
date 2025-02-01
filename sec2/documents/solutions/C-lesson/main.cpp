@@ -6,7 +6,14 @@
 using namespace std;
 #define MAX_SIZE 100
 
+void solution_4();
+
 void main() {
+	solution_4();
+}
+
+
+void solution_3() {
 	printf("===maze search===\n");
 	char filename[] = "./data/input_maze.txt";
 	char array[MAX_SIZE][MAX_SIZE];
@@ -17,4 +24,10 @@ void main() {
 
 	int count = Solve(array);
 	printf("shortest cost %d", count);
+}
+
+void solution_4() {
+	printf("===saluman's army===\n");
+	int points[] = { 15, 20, 7, 1, 50, 30 };
+	printf("%d", sizeof(points) / sizeof(*points));
 }

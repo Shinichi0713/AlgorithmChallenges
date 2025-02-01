@@ -30,6 +30,9 @@
     <ClCompile Include="3-maze-calculate.cpp">
       <Filter>ソース ファイル\lesson</Filter>
     </ClCompile>
+    <ClCompile Include="4-saruman-army.cpp">
+      <Filter>ソース ファイル\lesson</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stack.h">
@@ -39,6 +42,9 @@
       <Filter>ソース ファイル\lesson</Filter>
     </ClInclude>
     <ClInclude Include="3-maze-calculate.h">
+      <Filter>ソース ファイル\lesson</Filter>
+    </ClInclude>
+    <ClInclude Include="4-saruman-army.h">
       <Filter>ソース ファイル\lesson</Filter>
     </ClInclude>
   </ItemGroup>
