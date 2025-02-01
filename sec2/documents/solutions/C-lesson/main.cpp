@@ -1,6 +1,7 @@
 ﻿#include <queue>
 #include <stdio.h>
 #include "3-maze-calculate.h"
+#include "4-saruman-army.h"
 #include <format>
 
 using namespace std;
@@ -29,5 +30,5 @@ void solution_3() {
 void solution_4() {
 	printf("===saluman's army===\n");
 	int points[] = { 15, 20, 7, 1, 50, 30 };
-	printf("%d", sizeof(points) / sizeof(*points));
+	int* arrayArranged = ArrangeArray(points, sizeof(points)/sizeof(*points));
 }
