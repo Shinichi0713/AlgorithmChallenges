@@ -23,6 +23,7 @@ int partition(int* arr, int low, int high) {
 
 // クイックソートのメイン関数
 void quickSort(int* arr, int low, int high) {
+    // 順番を示すlow = highなら、並び替え不要
     if (low < high) {
         int pi = partition(arr, low, high);
 
@@ -35,8 +36,27 @@ void quickSort(int* arr, int low, int high) {
 int* ArrangeArray(int* arrayInput, int sizeArray) {
     int* arrayOutput = { };
     quickSort(arrayInput, 0, sizeArray - 1);
-    for (int i = 0; i < sizeArray; i++) {
-        printf("%d\n", arrayInput[i]);
-    }
     return arrayInput;
 }
+
+// サルマンアルゴリズム
+int solve(int* arrayInput, int sizeArray, int rangeValid) {
+    for (int i = 0; i < sizeArray; i++) {
+        printf("%d ", arrayInput[i]);
+    }
+    printf("\n");
+    int countSigning = 0;
+    int indexCurrent = 0;
+    while (indexCurrent < sizeArray) {
+        // checking
+        int positionSign = arrayInput[indexCurrent] + rangeValid;
+        countSigning += 1;
+        while (arrayInput[indexCurrent] < positionSign + rangeValid && indexCurrent < sizeArray) {
+            indexCurrent++;
+        }
+
+    }
+    
+    return countSigning;
+}
+
