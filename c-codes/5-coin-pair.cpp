@@ -68,4 +68,27 @@ void printCombination(int arr[], int data[], int start, int end, int index, int 
     }
 }
 
+// 再帰関数の定義
+void findPairSpecifiedNumber(int arr[], int n, int target, int start, int currSum, int comb[], int combIndex) {
+    if (currSum == target) {
+        // 組み合わせが見つかった場合、表示する
+        for (int i = 0; i < combIndex; i++) {
+            printf("%d ", comb[i]);
+            if (i < combIndex - 1) {
+                printf("+ ");
+            }
+        }
+        printf("= %d\n", target);
+        return;
+    }
 
+    // 再帰的に要素を追加して組み合わせを探索する
+    for (int i = start; i < n; i++) {
+        if (currSum + arr[i] > target) {
+            continue;
+        }
+
+        comb[combIndex] = arr[i];
+        findPairSpecifiedNumber(arr, n, target, i + 1, currSum + arr[i], comb, combIndex + 1);
+    }
+}

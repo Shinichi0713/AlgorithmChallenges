@@ -46,6 +46,18 @@ void solution_5() {
 }
 
 
+void solution_5_exception() {
+	printf("===find pairs===\n");
+	
+	int arr[] = { 2, 4, 6, 8 };
+	int n = sizeof(arr) / sizeof(arr[0]);
+	int target = 10;
+	printf("target number: %d\n", target);
+	int comb[4]; // 現在の組み合わせを格納するための配列
+	findPairSpecifiedNumber(arr, n, target, 0, 0, comb, 0);
+}
+
+
 void main() {
-	solution_5();
+	solution_5_exception();
 }
