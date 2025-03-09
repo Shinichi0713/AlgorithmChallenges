@@ -33,6 +33,12 @@
     <ClCompile Include="4-saruman-army.cpp">
       <Filter>ソース ファイル\lesson</Filter>
     </ClCompile>
+    <ClCompile Include="5-coin-pair.cpp">
+      <Filter>ソース ファイル\lesson</Filter>
+    </ClCompile>
+    <ClCompile Include="6-knapsack.cpp">
+      <Filter>ソース ファイル\lesson</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stack.h">
@@ -45,6 +51,12 @@
       <Filter>ソース ファイル\lesson</Filter>
     </ClInclude>
     <ClInclude Include="4-saruman-army.h">
+      <Filter>ソース ファイル\lesson</Filter>
+    </ClInclude>
+    <ClInclude Include="5-coin-pair.h">
+      <Filter>ソース ファイル\lesson</Filter>
+    </ClInclude>
+    <ClInclude Include="6-knapsack.h">
       <Filter>ソース ファイル\lesson</Filter>
     </ClInclude>
   </ItemGroup>

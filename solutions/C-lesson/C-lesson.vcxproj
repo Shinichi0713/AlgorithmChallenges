@@ -143,12 +143,16 @@
     <ClCompile Include="2-lake-counting.cpp" />
     <ClCompile Include="3-maze-calculate.cpp" />
     <ClCompile Include="4-saruman-army.cpp" />
+    <ClCompile Include="5-coin-pair.cpp" />
+    <ClCompile Include="6-knapsack.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="stack.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="3-maze-calculate.h" />
     <ClInclude Include="4-saruman-army.h" />
+    <ClInclude Include="5-coin-pair.h" />
+    <ClInclude Include="6-knapsack.h" />
     <ClInclude Include="stack.h" />
     <ClInclude Include="2-lake-counting.h" />
   </ItemGroup>
