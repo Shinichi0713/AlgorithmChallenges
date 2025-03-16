@@ -60,7 +60,19 @@ void solution_5_exception() {
 
 void solution_6_knapsack() {
 	printf("===knapsack problem===\n");
-	solve();
+	int w[4], v[4];
+	w[0] = 2;
+	w[1] = 1;
+	w[2] = 3;
+	w[3] = 2;
+	v[0] = 3;
+	v[1] = 2;
+	v[2] = 4;
+	v[3] = 2;
+	int n = sizeof(w) / sizeof(w[0]);
+	int W = 5;
+	int value = solve(w, v, W, n);
+	printf("best value: %d \n", value);
 }
 
 

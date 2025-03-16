@@ -25,19 +25,13 @@ int rec(int i, int j, int n) {
 	return dp[i][j] = value;
 }
 
-void solve() {
+int solve(int wInput[], int vInput[], int W, int n) {
 	memset(dp, -1, sizeof(dp));
-	w[0] = 2;
-	w[1] = 1;
-	w[2] = 3;
-	w[3] = 2;
-	v[0] = 3;
-	v[1] = 2;
-	v[2] = 4;
-	v[3] = 2;
-
-	int n = 4;
-	int W = 5;
+	
+	for (int i = 0; i < n; i++) {
+		w[i] = wInput[i];
+		v[i] = vInput[i];
+	}
 	int value = rec(0, W, n);
-	printf("%d \n", value);
+	return value;
 }
