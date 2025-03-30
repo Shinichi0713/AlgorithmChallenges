@@ -3,6 +3,8 @@
 #include "3-maze-calculate.h"
 #include "4-saruman-army.h"
 #include "5-coin-pair.h"
+#include "6-knapsack.h"
+#include "7-LCS-search.h"
 #include <format>
 
 using namespace std;
@@ -57,7 +59,33 @@ void solution_5_exception() {
 	findPairSpecifiedNumber(arr, n, target, 0, 0, comb, 0);
 }
 
+void solution_6_knapsack() {
+	printf("===knapsack problem===\n");
+	int w[4], v[4];
+	w[0] = 2;
+	w[1] = 1;
+	w[2] = 3;
+	w[3] = 2;
+	v[0] = 3;
+	v[1] = 2;
+	v[2] = 4;
+	v[3] = 2;
+	int n = sizeof(w) / sizeof(w[0]);
+	int W = 5;
+	int value = solve(w, v, W, n);
+	printf("best value: %d \n", value);
+}
+
+void solution_7_lcs() {
+	printf("===LCS problem===\n");
+	char s[] = "abcd";
+	char t[] = "becd";
+	int n = sizeof(s) / sizeof(s[0]);
+	int m = sizeof(t) / sizeof(t[0]);
+	int bcd = solveBcd(s, t, n, m);
+	printf("LCB value: %d \n", bcd);
+}
 
 void main() {
-	solution_5_exception();
+	solution_7_lcs();
 }
