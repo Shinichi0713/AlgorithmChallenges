@@ -88,15 +88,15 @@ If there are **two ovens** available, what is the minimum time required to cook 
 
 **Constraints:**
 
-* 1≤N≤1001 \leq N \leq 100
-* 1≤Ti≤1031 \leq T_i \leq 10^3
+* 1≤N≤1001
+* 1≤Ti≤1031
 * All input values are integers.
 
 **Input Format:**
 The input is provided as follows:
 
 NT1T2…TNN
-T_1 T_2 \ldots T_N
+
 
 **Output Format:**
 Output the answer.
