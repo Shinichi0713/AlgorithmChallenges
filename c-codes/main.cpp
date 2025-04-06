@@ -5,6 +5,7 @@
 #include "5-coin-pair.h"
 #include "6-knapsack.h"
 #include "7-LCS-search.h"
+#include "8-recursive-relation.h"
 #include <format>
 
 using namespace std;
@@ -77,15 +78,30 @@ void solution_6_knapsack() {
 }
 
 void solution_7_lcs() {
+	int numInput = 6;
+	bool result = isPrimenumber(numInput);
+	const char* boolStr = result ? "true" : "false";
+	printf("result : %s\n", boolStr);
+
 	printf("===LCS problem===\n");
-	char s[] = "abcd";
-	char t[] = "becd";
+	char s[] = "apple";
+	char t[] = "pile";
 	int n = sizeof(s) / sizeof(s[0]);
 	int m = sizeof(t) / sizeof(t[0]);
 	int bcd = solveBcd(s, t, n, m);
 	printf("LCB value: %d \n", bcd);
 }
 
+void solution_8_recurrence() {
+	checkPrimeFactors(100);
+
+	int x, d, k;
+	// x, d, k の値を入力
+	scanf_s("%d %d %d", &x, &d, &k);
+	int ans = solveRcurrence(x, d, k);
+	printf("ans:%d\n", ans);
+}
+
 void main() {
-	solution_7_lcs();
+	solution_8_recurrence();
 }
