@@ -6,7 +6,9 @@
 #include "6-knapsack.h"
 #include "7-LCS-search.h"
 #include "8-recursive-relation.h"
+#include "9-partial-sum.h"
 #include <format>
+#include <stdbool.h>
 
 using namespace std;
 #define MAX_SIZE 100
@@ -102,6 +104,20 @@ void solution_8_recurrence() {
 	printf("ans:%d\n", ans);
 }
 
+void solution_9_partialsum() {
+
+	int anseweHomework = solveRecurrence(4);
+	printf("answer: %d\n", anseweHomework);
+
+	int a[3] = { 3, 5, 8 };
+	int m[3] = { 3, 2, 2 };
+	int n = sizeof(a) / sizeof(a[0]);
+	int K = 17;
+	bool result = solvePartialSum(a, m, n, K);
+	const char* status = result ? "OK" : "NG";
+	printf("処理状況: %s\n", status);
+}
+
 void main() {
-	solution_8_recurrence();
+	solution_9_partialsum();
 }

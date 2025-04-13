@@ -23,3 +23,15 @@ int solveBcd(char s[], char t[], int n, int m) {
 	std::cout << "Time taken: " << duration.count() << " seconds" << std::endl;
 	return dp[n][m];
 }
+
+bool isPrimenumber(int numInput) {
+	int countDivide = 0;
+	for (int i = 1; i <= numInput; i++) {
+		if (numInput % i == 0) {
+			countDivide++;
+		}
+	}
+	if (countDivide >= 3) return false;
+	else return true;
+}
+

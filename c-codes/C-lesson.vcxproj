@@ -147,6 +147,7 @@
     <ClCompile Include="6-knapsack.cpp" />
     <ClCompile Include="7-LCS-search.cpp" />
     <ClCompile Include="8-recursive-relation.cpp" />
+    <ClCompile Include="9-partial-sum.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="stack.cpp" />
   </ItemGroup>
@@ -157,6 +158,7 @@
     <ClInclude Include="6-knapsack.h" />
     <ClInclude Include="7-LCS-search.h" />
     <ClInclude Include="8-recursive-relation.h" />
+    <ClInclude Include="9-partial-sum.h" />
     <ClInclude Include="stack.h" />
     <ClInclude Include="2-lake-counting.h" />
   </ItemGroup>

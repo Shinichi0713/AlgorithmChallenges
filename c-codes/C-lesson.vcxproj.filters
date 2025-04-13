@@ -45,6 +45,9 @@
     <ClCompile Include="8-recursive-relation.cpp">
       <Filter>ソース ファイル\lesson</Filter>
     </ClCompile>
+    <ClCompile Include="9-partial-sum.cpp">
+      <Filter>ソース ファイル\lesson</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stack.h">
@@ -69,6 +72,9 @@
       <Filter>ソース ファイル\lesson</Filter>
     </ClInclude>
     <ClInclude Include="8-recursive-relation.h">
+      <Filter>ソース ファイル\lesson</Filter>
+    </ClInclude>
+    <ClInclude Include="9-partial-sum.h">
       <Filter>ソース ファイル\lesson</Filter>
     </ClInclude>
   </ItemGroup>
