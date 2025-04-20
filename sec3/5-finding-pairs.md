@@ -26,7 +26,6 @@ Determine if it's possible to select some of these numbers such that their total
 - 1 ≦ K ≦ 100000
 ```
 
-
 input
 
 ```c
