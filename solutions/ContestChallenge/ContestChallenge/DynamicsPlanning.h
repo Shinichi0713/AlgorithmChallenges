@@ -3,6 +3,7 @@ class DynamicsPlanning
 {
 public:
 	DynamicsPlanning();
+	int Drawing();
 private:
 	
 };
