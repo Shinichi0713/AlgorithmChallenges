@@ -8,11 +8,14 @@
 #include <iomanip> // setw, setprecision用
 #include <algorithm>
 #include <functional>
+
 // 定数設定
 const int WIDTH = 80;    // コンソール幅
 const int HEIGHT = 24;   // コンソール高さ
 const double PI = 3.14159265358979323846;
 const int DURATION_SEC = 20; // 実行時間（秒）
+using namespace std;
+
 
 // カーソル位置を移動させる関数 (VT100エスケープシーケンス)
 void set_cursor_position(int x, int y) {
@@ -63,8 +66,8 @@ int DynamicsPlanning::Drawing() {
             double radius = (double)i * 0.15;
 
             // 渦巻きの最大半径を制限
-            if (radius > std::min(center_x, center_y) - 2) {
-                radius = std::min(center_x, center_y) - 2;
+            if (radius > (double)min((double)center_x, (double)center_y) - 2.0) {
+                radius = (double)min((double)center_x, (double)center_y) - 2.0;
             }
 
             // 3. 座標計算 (極座標から直交座標へ)
@@ -91,3 +94,4 @@ int DynamicsPlanning::Drawing() {
     std::cout << "\n終了しました。\n";
     return 0;
 }
+

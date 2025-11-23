@@ -162,3 +162,8 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 sec1/2_ants.py
+
+
+*.py linguist-vendored
+*.py linguist-generated
+

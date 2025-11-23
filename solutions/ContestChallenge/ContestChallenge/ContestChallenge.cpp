@@ -3,8 +3,22 @@
 
 #include <iostream>
 #include "DynamicsPlanning.h"
+#include <algorithm> // std::min を使用するために必要
+
 
 using namespace std;
+
+// std::min はテンプレート関数なので、double型を渡せばdouble型として機能します。
+void find_min_two_args() {
+    double a = 3.14;
+    double b = 2.71;
+
+    // std::min(a, b) の結果が最小値となる
+    double min_val = std::min(a, b);
+
+    std::cout << "引数 (" << a << ", " << b << ") の最小値は: " << min_val << std::endl;
+}
+
 
 int main()
 {
