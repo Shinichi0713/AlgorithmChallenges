@@ -4,7 +4,7 @@
 #include <iostream>
 #include "DynamicsPlanning.h"
 #include <algorithm> // std::min を使用するために必要
-
+#include <vector>
 
 using namespace std;
 
@@ -19,13 +19,6 @@ void find_min_two_args() {
     std::cout << "引数 (" << a << ", " << b << ") の最小値は: " << min_val << std::endl;
 }
 
-
-int main()
-{
-    DynamicsPlanning *dp = new DynamicsPlanning();
-    cout << "Hello World!\n";
-}
-
 void Exe1() {
     int num = 4;
     int w[4] = { 2, 2, 3, 2 }, v[4] = {3, 2, 4, 2};
@@ -33,5 +26,15 @@ void Exe1() {
 
 }
 
+void Exe2() {
+    int n = 10;
+    DynamicsPlanning* dp = new DynamicsPlanning();
 
+    dp->solveFibonacciRecursive();
 
+}
+
+int main()
+{
+    Exe2();
+}
