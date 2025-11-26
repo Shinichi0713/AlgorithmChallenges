@@ -8,6 +8,7 @@
 #include <iomanip> // setw, setprecision用
 #include <algorithm>
 #include <functional>
+#include <vector>
 
 // 定数設定
 const int WIDTH = 80;    // コンソール幅
@@ -15,7 +16,53 @@ const int HEIGHT = 24;   // コンソール高さ
 const double PI = 3.14159265358979323846;
 const int DURATION_SEC = 20; // 実行時間（秒）
 using namespace std;
+int UNCALCULATED = -1;
+// 描画設定
+const int WINDOW_WIDTH = 800;
+const int WINDOW_HEIGHT = 800;
+const int CENTER_X = WINDOW_WIDTH / 2;
+const int CENTER_Y = WINDOW_HEIGHT / 2;
+const int NUM_CIRCLES = 30; // 描画する円の数
+const float RADIUS_STEP = 15.0f; // 円の半径の増分
+const float ROTATION_SPEED = 0.5f; // アニメーションのための回転速度 (度/フレーム)
 
+
+int FibonacciRecursive(int n, std::vector<int>& memo) {
+    // 1. メモの確認 (既に計算済みであればそれを返す)
+    // memoは呼び出し元のローカル変数を参照しているため、以前の計算結果が保持されている
+    if (memo[n] != UNCALCULATED) {
+        return memo[n];
+    }
+
+    // 2. ベースケース
+    if (n == 0) return memo[n] = 0;
+    if (n == 1) return memo[n] = 1;
+
+    // 3. 再帰的な計算とメモ化
+    int result = FibonacciRecursive(n - 1, memo) + FibonacciRecursive(n - 2, memo);
+
+    // 計算結果をテーブルに保存 (メモ化)
+    memo[n] = result;
+
+    return result;
+}
+
+int DynamicsPlanning::solveFibonacciRecursive() {
+    int n = 10;
+
+    // 【重要なポイント】
+    // メモ化テーブルは main 関数のローカル変数として定義される
+    // std::vector<int> は動的メモリ（ヒープ）にデータを格納しますが、
+    // 変数 memo 自体はローカルスタック上の変数です。
+    // サイズ n+1 で初期化し、すべてを UNCALCULATED (-1) に設定
+    std::vector<int> memo(n + 1, UNCALCULATED);
+
+    std::cout << n << "番目のフィボナッチ数: "
+        << FibonacciRecursive(n, memo)
+        << std::endl;
+
+    return 0;
+}
 
 // カーソル位置を移動させる関数 (VT100エスケープシーケンス)
 void set_cursor_position(int x, int y) {
@@ -27,21 +74,11 @@ void set_cursor_position(int x, int y) {
 void clear_screen() {
     std::cout << "\033[2J"; // 画面全体を消去
 }
-// 描画設定
-const int WINDOW_WIDTH = 800;
-const int WINDOW_HEIGHT = 800;
-const int CENTER_X = WINDOW_WIDTH / 2;
-const int CENTER_Y = WINDOW_HEIGHT / 2;
-const int NUM_CIRCLES = 30; // 描画する円の数
-const float RADIUS_STEP = 15.0f; // 円の半径の増分
-const float ROTATION_SPEED = 0.5f; // アニメーションのための回転速度 (度/フレーム)
+
 
 DynamicsPlanning::DynamicsPlanning() {
 	printf("Class DynamicsPlanning\n");
 }
-
-
-
 
 
 int DynamicsPlanning::Drawing() {
