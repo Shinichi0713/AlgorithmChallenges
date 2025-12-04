@@ -30,10 +30,16 @@
     <ClCompile Include="DynamicsPlanning.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
+    <ClCompile Include="RxClass.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DynamicsPlanning.h">
       <Filter>Function</Filter>
+    </ClInclude>
+    <ClInclude Include="RxClass.h">
+      <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

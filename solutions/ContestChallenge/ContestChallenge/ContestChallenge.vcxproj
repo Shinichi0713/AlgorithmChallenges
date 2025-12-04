@@ -142,9 +142,11 @@
   <ItemGroup>
     <ClCompile Include="ContestChallenge.cpp" />
     <ClCompile Include="DynamicsPlanning.cpp" />
+    <ClCompile Include="RxClass.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DynamicsPlanning.h" />
+    <ClInclude Include="RxClass.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="LinkFolder.txt" />
