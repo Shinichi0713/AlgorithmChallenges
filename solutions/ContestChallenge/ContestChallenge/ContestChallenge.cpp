@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "DynamicsPlanning.h"
+#include "TestCode.h"
 #include <algorithm> // std::min を使用するために必要
 #include <vector>
 

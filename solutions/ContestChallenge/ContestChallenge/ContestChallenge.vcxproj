@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -142,15 +142,22 @@
   <ItemGroup>
     <ClCompile Include="ContestChallenge.cpp" />
     <ClCompile Include="DynamicsPlanning.cpp" />
+    <ClCompile Include="Mathmatics.cpp" />
     <ClCompile Include="RxClass.cpp" />
+    <ClCompile Include="TestCode.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DynamicsPlanning.h" />
+    <ClInclude Include="Mathmatics.h" />
     <ClInclude Include="RxClass.h" />
+    <ClInclude Include="TestCode.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="LinkFolder.txt" />
     <Text Include="RecurrenceRelation.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

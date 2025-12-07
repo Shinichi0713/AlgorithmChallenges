@@ -175,7 +175,7 @@ void printMatrix(const std::vector<std::vector<int>>& matrix) {
     }
 }
 
-int main() {
+int solve() {
     // 例として 2x3 行列 A と 3x2 行列 B を定義
     // 積 C は 2x2 行列になります
     std::vector<std::vector<int>> A = {
