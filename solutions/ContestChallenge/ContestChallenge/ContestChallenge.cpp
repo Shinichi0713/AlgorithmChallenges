@@ -24,7 +24,9 @@ void Exe1() {
     int num = 4;
     int w[4] = { 2, 2, 3, 2 }, v[4] = {3, 2, 4, 2};
     int LimitW = 5;
-
+    DynamicsPlanning* dp = new DynamicsPlanning();
+    int value = dp->search_napsack(w, v, LimitW, num);
+    std:cout << "最良値" << value << std::endl;
 }
 
 void Exe2() {
@@ -37,5 +39,5 @@ void Exe2() {
 
 int main()
 {
-    Exe2();
+    Exe1();
 }
