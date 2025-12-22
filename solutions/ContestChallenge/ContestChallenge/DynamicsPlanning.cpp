@@ -58,6 +58,37 @@ int DynamicsPlanning::search_napsack(int* weight, int* value, int LimitW, int nu
 }
 
 
+int __SearchDynamicMemo(int* weight, int* value, int numLimit, int i, int j, int wCurrent, int LimitW, int** dp) {
+    if (i >= numLimit) return 0;
+    else if (dp[i][j] > 0) return dp[i][j];
+    else if (wCurrent + weight[i] > LimitW) return __SearchDynamicMemo(weight, value, numLimit, i + 1, j, wCurrent, LimitW, dp);
+    else {
+        int res = max(__SearchDynamicMemo(weight, value, numLimit, i + 1, j, wCurrent, LimitW, dp),
+            __SearchDynamicMemo(weight, value, numLimit, i + 1, j, wCurrent + weight[i], LimitW, dp) + value[i]);
+        return res;
+    }
+}
+
+/* 動的メモを利用して探索を行う */
+int DynamicsPlanning::searchDynamicMemo(int* weight, int* value, int LimitW, int numLimit) {
+    const int ROWS = 10;
+    const int COLS = 10;
+
+    int** dp = new int* [ROWS];
+    // 2. 各ポインタに対して列数分のメモリブロックを確保
+    for (int i = 0; i < ROWS; ++i) {
+        dp[i] = new int[COLS];
+    }
+
+    for (int i = 0; i < numLimit; i++) {
+        printf("%d, %d \n", weight[i], value[i]);
+    }
+
+    int score = __SearchDynamicMemo(weight, value, numLimit, 0, 0, 0, LimitW, dp);
+    return score;
+}
+
+
 int FibonacciRecursive(int n, std::vector<int>& memo) {
     // 1. メモの確認 (既に計算済みであればそれを返す)
     // memoは呼び出し元のローカル変数を参照しているため、以前の計算結果が保持されている
